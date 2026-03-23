@@ -1,3 +1,5 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import QuoteSection from "./components/QuoteSection";
@@ -10,7 +12,9 @@ import LVBanner from "./components/LVBanner";
 import FinalBanner from "./components/FinalBanner";
 import Footer from "./components/Footer";
 
-function App() {
+import NewsPage from "./pages/NewsPage";
+
+function HomePage() {
   return (
     <div>
       <Header />
@@ -25,6 +29,17 @@ function App() {
       <FinalBanner />
       <Footer />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/news" element={<NewsPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,164 @@
+.news-topbar {
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.news-top-inner {
+  height: 82px;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.news-top-left,
+.news-top-center,
+.news-top-right {
+  display: flex;
+  align-items: center;
+}
+
+.news-top-left {
+  gap: 14px;
+  min-width: 160px;
+}
+
+.news-top-center {
+  justify-content: center;
+  flex: 1;
+}
+
+.news-top-right {
+  gap: 18px;
+  min-width: 220px;
+  justify-content: flex-end;
+}
+
+.news-nav-toggle {
+  background: transparent;
+  border: none;
+  font-size: 26px;
+  line-height: 1;
+  color: #111111;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.news-mini-badge {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  display: block;
+}
+
+.news-brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.news-brand-logo {
+  height: 54px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.news-sponsor {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.news-emirates-logo {
+  height: 42px;
+}
+
+.news-navrow {
+  width: 100%;
+  background: #ffffff;
+  border-top: 1px solid #f3f3f3;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.news-nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 14px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 54px;
+}
+
+.news-nav-links li {
+  margin: 0;
+  padding: 0;
+}
+
+.news-nav-links a {
+  text-decoration: none;
+  color: #1664d9;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  transition: opacity 0.2s ease;
+}
+
+.news-nav-links a:hover {
+  opacity: 0.8;
+}
+
+.news-nav-links a.active {
+  border-bottom: 2px solid #1664d9;
+  padding-bottom: 4px;
+}
+
+@media (max-width: 900px) {
+  .news-top-right {
+    gap: 10px;
+    min-width: 150px;
+  }
+
+  .news-sponsor {
+    height: 30px;
+  }
+
+  .news-emirates-logo {
+    height: 34px;
+  }
+
+  .news-nav-links {
+    gap: 28px;
+  }
+}
+
+@media (max-width: 700px) {
+  .news-top-inner {
+    height: 74px;
+    padding: 0 10px;
+  }
+
+  .news-brand-logo {
+    height: 44px;
+  }
+
+  .news-mini-badge {
+    width: 28px;
+    height: 28px;
+  }
+
+  .news-nav-links {
+    gap: 18px;
+    padding: 12px 10px;
+    flex-wrap: wrap;
+  }
+
+  .news-nav-links a {
+    font-size: 14px;
+  }
+}
