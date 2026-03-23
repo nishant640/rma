@@ -1,0 +1,57 @@
+.legendary-section {
+  padding: 80px 40px;
+  color: white;
+  text-align: left;
+}
+
+.legendary-title {
+  font-size: 32px;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  font-family: "Michroma", sans-serif;
+}
+
+.legendary-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.legendary-image {
+  border-radius: 20px;
+  display: block;
+}
+
+/* LEFT IMAGE (trophy wall) */
+.left-image {
+  width: 700px;
+  height: 550px;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* RIGHT IMAGE (stats card) */
+.right-image {
+  width: 600px;
+  height: 600px;
+  object-fit: cover;
+  object-position: center;
+  background: white;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+  .legendary-container {
+    flex-direction: column;
+  }
+
+  .left-image,
+  .right-image {
+    width: 90%;
+    height: auto;
+  }
+}

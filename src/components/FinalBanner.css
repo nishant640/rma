@@ -1,0 +1,23 @@
+.final-banner {
+  background: #f4f4f4;
+  text-align: center;
+  padding: 70px 20px 75px;
+}
+
+.final-banner h2 {
+  margin: 0 0 16px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 42px;   /* ↓ reduced */
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.final-banner p {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;   /* ↓ reduced */
+  color: #6a6a6a;
+  letter-spacing: 0.5px;
+}

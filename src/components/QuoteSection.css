@@ -1,0 +1,27 @@
+.quote-section{
+  width: 100%;
+  padding: 80px 40px;
+  background: #f4f4f6;
+  text-align: center;
+}
+
+.quote-inner{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.quote-text{
+  font-family: 'Michroma', sans-serif;
+  font-size: 24px;
+  line-height: 1.8;
+  margin: 0 0 22px 0;
+  letter-spacing: 1px;
+}
+
+.quote-author{
+  font-family: 'Michroma', sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  opacity: 0.7;
+  margin: 0;
+}
