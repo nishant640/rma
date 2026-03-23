@@ -1,0 +1,45 @@
+.players-subscribe {
+  width: 94%;
+  max-width: 1320px;
+  margin: 40px auto 60px;
+}
+
+.players-subscribe-inner {
+  background: #fff;
+  border-radius: 14px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.players-subscribe-inner h2 {
+  font-family: "Michroma", sans-serif;
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.players-subscribe-inner p {
+  color: #666;
+  margin-bottom: 18px;
+}
+
+.players-subscribe-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.players-subscribe-box input {
+  padding: 10px;
+  width: 260px;
+  border: 1px solid #ddd;
+}
+
+.players-subscribe-box button {
+  padding: 10px 18px;
+  background: #1db954;
+  border: none;
+  color: white;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+}

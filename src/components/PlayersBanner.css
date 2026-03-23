@@ -1,0 +1,52 @@
+.players-banner {
+  width: 100%;
+  background: #005ed9;
+  height: 180px;
+  display: flex;
+  align-items: center;
+}
+
+.players-banner-inner {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-left: 78px;
+  padding-top: 6px;
+}
+
+.players-banner h1 {
+  margin: 0 0 14px 0;
+  font-family: "Michroma", sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1;
+  color: #f2f2f2;
+}
+
+.players-banner p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #f2f2f2;
+}
+
+@media (max-width: 768px) {
+  .players-banner {
+    height: 170px;
+  }
+
+  .players-banner-inner {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .players-banner h1 {
+    font-size: 38px;
+  }
+
+  .players-banner p {
+    font-size: 14px;
+  }
+}

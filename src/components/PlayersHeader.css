@@ -1,0 +1,180 @@
+.players-topbar {
+  width: 100%;
+  background: #f5f5f5;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.players-top-inner {
+  height: 92px;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.players-top-left,
+.players-top-center,
+.players-top-right {
+  display: flex;
+  align-items: center;
+}
+
+.players-top-left {
+  min-width: 150px;
+  gap: 12px;
+}
+
+.players-top-center {
+  flex: 1;
+  justify-content: center;
+}
+
+.players-top-right {
+  min-width: 250px;
+  justify-content: flex-end;
+  gap: 18px;
+}
+
+.players-nav-toggle {
+  border: none;
+  background: transparent;
+  color: #111;
+  font-size: 31px;
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  box-shadow: none;
+  outline: none;
+}
+
+.players-mini-badge {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  display: block;
+}
+
+.players-brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.players-brand-logo {
+  height: 50px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.players-sponsor-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.players-sponsor {
+  display: block;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  background: transparent;
+}
+
+.players-adidas {
+  height: 36px;
+}
+
+.players-emirates {
+  height: 43px;
+}
+
+.players-navrow {
+  width: 100%;
+  background: #f5f5f5;
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.players-nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 14px 20px 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+}
+
+.players-nav-links li {
+  margin: 0;
+  padding: 0;
+}
+
+.players-nav-links a {
+  text-decoration: none;
+  color: #0b63d9;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.players-nav-links a.active {
+  text-decoration: underline;
+  text-underline-offset: 7px;
+  text-decoration-thickness: 2px;
+}
+
+@media (max-width: 768px) {
+  .players-top-inner {
+    height: 74px;
+    padding: 0 10px;
+  }
+
+  .players-top-left {
+    min-width: auto;
+    gap: 10px;
+  }
+
+  .players-top-right {
+    min-width: auto;
+    gap: 10px;
+  }
+
+  .players-brand-logo {
+    height: 42px;
+  }
+
+  .players-mini-badge {
+    width: 28px;
+    height: 28px;
+  }
+
+  .players-adidas {
+    height: 28px;
+  }
+
+  .players-emirates {
+    height: 34px;
+  }
+
+  .players-nav-toggle {
+    font-size: 25px;
+  }
+
+  .players-nav-links {
+    gap: 18px;
+    padding: 12px 10px;
+    flex-wrap: wrap;
+  }
+
+  .players-nav-links a {
+    font-size: 14px;
+  }
+}

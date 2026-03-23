@@ -13,6 +13,7 @@ import FinalBanner from "./components/FinalBanner";
 import Footer from "./components/Footer";
 
 import NewsPage from "./pages/NewsPage";
+import PlayersPage from "./pages/PlayersPage";
 
 function HomePage() {
   return (
@@ -38,6 +39,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/news" element={<NewsPage />} />
+        <Route path="/players" element={<PlayersPage />} />
       </Routes>
     </BrowserRouter>
   );
