@@ -46,12 +46,16 @@
   letter-spacing: 1px;
 }
 
-/* logo */
-.footer-logo {
-  font-size: 24px; 
-  font-weight: 700;
-  color: #1e5bb8; 
-  letter-spacing: 0.2px;
+/* FIXED LOGO */
+.login-footer .footer-logo {
+  width: 140px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* better spacing for logo column */
+.logo-col {
+  gap: 12px;
 }
 
 /* text spacing */

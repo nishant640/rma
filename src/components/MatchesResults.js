@@ -10,7 +10,11 @@ export default function MatchesResults() {
 
           <div className="result-row">
             <div className="team left">
-              <img className="club" src="/images/rm.png" alt="Real Madrid" />
+              <img
+                className="club"
+                src={`${process.env.PUBLIC_URL}/images/rm.png`}
+                alt="Real Madrid"
+              />
               <span>Real Madrid</span>
             </div>
 
@@ -18,7 +22,11 @@ export default function MatchesResults() {
 
             <div className="team right">
               <span>Sevilla</span>
-              <img className="club" src="/images/sevilla.png" alt="Sevilla" />
+              <img
+                className="club"
+                src={`${process.env.PUBLIC_URL}/images/sevilla.png`}
+                alt="Sevilla"
+              />
             </div>
           </div>
 
@@ -28,7 +36,11 @@ export default function MatchesResults() {
 
           <div className="result-row">
             <div className="team left">
-              <img className="club" src="/images/rm.png" alt="Real Madrid" />
+              <img
+                className="club"
+                src={`${process.env.PUBLIC_URL}/images/rm.png`}
+                alt="Real Madrid"
+              />
               <span>Real Madrid</span>
             </div>
 
@@ -36,7 +48,11 @@ export default function MatchesResults() {
 
             <div className="team right">
               <span>FC Barcelona</span>
-              <img className="club" src="/images/barca.png" alt="FC Barcelona" />
+              <img
+                className="club"
+                src={`${process.env.PUBLIC_URL}/images/barca.png`}
+                alt="FC Barcelona"
+              />
             </div>
           </div>
 
@@ -46,7 +62,11 @@ export default function MatchesResults() {
 
           <div className="result-row">
             <div className="team left">
-              <img className="club" src="/images/rm.png" alt="Real Madrid" />
+              <img
+                className="club"
+                src={`${process.env.PUBLIC_URL}/images/rm.png`}
+                alt="Real Madrid"
+              />
               <span>Real Madrid</span>
             </div>
 
@@ -54,7 +74,11 @@ export default function MatchesResults() {
 
             <div className="team right">
               <span>Bayern Munich</span>
-              <img className="club" src="/images/bayern.png" alt="Bayern Munich" />
+              <img
+                className="club"
+                src={`${process.env.PUBLIC_URL}/images/bayern.png`}
+                alt="Bayern Munich"
+              />
             </div>
           </div>
 
