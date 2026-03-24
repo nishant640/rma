@@ -1,0 +1,21 @@
+.login-hero{
+  background:#0b63d9;
+  color:#fff;
+  padding:50px 0;
+}
+
+.login-hero-inner{
+  width:94%;
+  max-width:1320px;
+  margin:0 auto;
+}
+
+.login-hero h1{
+  margin:0 0 10px;
+  font-size:48px;
+  font-family:'Michroma', sans-serif;
+}
+
+.login-hero p{
+  margin:0;
+}

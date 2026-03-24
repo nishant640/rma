@@ -1,0 +1,94 @@
+.page{
+  width:94%;
+  max-width:1320px;
+  margin:0 auto;
+  padding:30px 0;
+}
+
+.results-wrap{
+  display:grid;
+  grid-template-columns:1fr 260px;
+  gap:18px;
+}
+
+.results-left,
+.results-right{
+  background:#fff;
+  border:1px solid #e6e6e6;
+  border-radius:12px;
+  padding:18px;
+}
+
+.results-left h2{
+  margin:0 0 12px;
+  font-family:'Michroma', sans-serif;
+  font-size:16px;
+}
+
+.result-row{
+  display:grid;
+  grid-template-columns:1fr 100px 1fr;
+  align-items:center;
+  border-top:1px solid #e6e6e6;
+  padding:14px 0;
+}
+
+.team{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.team.right{
+  justify-content:flex-end;
+}
+
+.club{
+  width:40px;
+}
+
+.score{
+  text-align:center;
+  font-weight:700;
+}
+
+.info-btn{
+  display:block;
+  margin:8px 0 14px;
+  padding:10px;
+  background:#f2f2f2;
+  border-radius:8px;
+  text-align:center;
+  font-size:12px;
+  text-decoration:none;
+  color:#333;
+}
+
+.table-card h3{
+  margin:0 0 10px;
+  font-family:'Michroma', sans-serif;
+  font-size:16px;
+}
+
+.table-row{
+  display:grid;
+  grid-template-columns:30px 1fr 40px;
+  border-top:1px solid #e6e6e6;
+  padding:10px 0;
+}
+
+.table-row.head{
+  border:none;
+  font-weight:700;
+}
+
+.table-note{
+  font-size:12px;
+  color:#666;
+}
+
+@media(max-width:1000px){
+  .results-wrap{
+    grid-template-columns:1fr;
+  }
+}

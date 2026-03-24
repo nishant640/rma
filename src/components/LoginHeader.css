@@ -1,0 +1,93 @@
+.topbar{
+  background:#fff;
+  border-bottom:1px solid rgba(0,0,0,0.06);
+}
+
+.top-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  height:72px;
+  padding:0 14px;
+}
+
+.top-left{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.nav-toggle{
+  font-size:25px;
+  background:none;
+  border:none;
+  cursor:pointer;
+  padding:0;
+  line-height:1;
+}
+
+.mini-badge{
+  width:44px;
+}
+
+.brand-logo{
+  height:46px;
+}
+
+.top-right{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.sponsor{
+  height:34px;
+}
+
+.navrow{
+  background:#fff;
+  border-bottom:4px solid #0b63d9;
+}
+
+.nav-links{
+  list-style:none;
+  margin:0;
+  padding:12px 20px;
+  display:flex;
+  justify-content:center;
+  gap:28px;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:#0b63d9;
+  font-weight:700;
+}
+
+.nav-links a.active{
+  text-decoration:underline;
+}
+
+@media (max-width:768px){
+  .nav-links{
+    display:none;
+    flex-direction:column;
+    width:100%;
+    gap:0;
+  }
+
+  .nav-links li{
+    width:100%;
+  }
+
+  .nav-links a{
+    display:block;
+    width:100%;
+    text-align:center;
+    padding:12px 0;
+  }
+
+  .nav-links.is-open{
+    display:flex;
+  }
+}

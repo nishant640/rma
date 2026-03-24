@@ -1,0 +1,21 @@
+.matches-hero {
+  background: #0b63d9;
+  color: #fff;
+  padding: 50px 0;
+}
+
+.matches-hero-inner {
+  width: 94%;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.matches-hero h1 {
+  margin: 0 0 10px;
+  font-size: 48px;
+  font-family: 'Michroma', sans-serif;
+}
+
+.matches-hero p {
+  margin: 0;
+}

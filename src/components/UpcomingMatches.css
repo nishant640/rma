@@ -1,0 +1,55 @@
+.upcoming{
+  width:94%;
+  max-width:1320px;
+  margin:18px auto;  
+  background:#fff;
+  border:1px solid #e6e6e6;
+  border-radius:12px;
+  padding:18px;
+}
+.upcoming h2{
+  margin:0;
+  font-family:'Michroma', sans-serif;
+  font-size:16px;
+}
+
+.upcoming-card{
+  margin-top:12px;
+  padding:14px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#f7f7f7;
+  border-radius:10px;
+}
+
+.bigclub{
+  width:70px;
+}
+
+.up-text{
+  text-align:center;
+}
+
+.up-title{
+  font-size:18px;
+}
+
+.up-title span{
+  font-weight:700;
+}
+
+.up-date{
+  font-size:14px;
+  margin-top:2px;
+}
+
+@media(max-width:700px){
+  .upcoming-card{
+    gap:12px;
+  }
+
+  .up-title{
+    font-size:16px;
+  }
+}

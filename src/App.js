@@ -14,6 +14,8 @@ import Footer from "./components/Footer";
 
 import NewsPage from "./pages/NewsPage";
 import PlayersPage from "./pages/PlayersPage";
+import MatchesPage from "./pages/MatchesPage";
+import LoginPage from "./pages/LoginPage";
 
 function HomePage() {
   return (
@@ -40,6 +42,8 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/news" element={<NewsPage />} />
         <Route path="/players" element={<PlayersPage />} />
+        <Route path="/matches" element={<MatchesPage />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
     </BrowserRouter>
   );
