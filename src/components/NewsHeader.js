@@ -16,7 +16,7 @@ function NewsHeader() {
 
             <img
               className="news-mini-badge"
-              src="/images/mini.png"
+              src={`${process.env.PUBLIC_URL}/images/mini.png`}
               alt="Real Madrid badge"
             />
           </div>
@@ -25,7 +25,7 @@ function NewsHeader() {
             <a className="news-brand" href="/">
               <img
                 className="news-brand-logo"
-                src="/images/logo.png"
+                src={`${process.env.PUBLIC_URL}/images/logo.png`}
                 alt="Real Madrid"
               />
             </a>
@@ -39,7 +39,7 @@ function NewsHeader() {
             >
               <img
                 className="news-sponsor adidas-logo"
-                src="/images/adidas.png"
+                src={`${process.env.PUBLIC_URL}/images/adidas.png`}
                 alt="Adidas"
               />
             </a>
@@ -51,7 +51,7 @@ function NewsHeader() {
             >
               <img
                 className="news-sponsor emirates-logo"
-                src="/images/emirates.png"
+                src={`${process.env.PUBLIC_URL}/images/emirates.png`}
                 alt="Emirates"
               />
             </a>

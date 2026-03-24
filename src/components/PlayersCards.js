@@ -9,7 +9,10 @@ export default function PlayersCards() {
 
         <div className="players-grid two-col">
           <div className="player-card">
-            <img src="/images/courtois.png" alt="Courtois" />
+            <img
+              src={`${process.env.PUBLIC_URL}/images/courtois.png`}
+              alt="Courtois"
+            />
             <div className="player-overlay">
               <div className="player-number">1</div>
               <div>
@@ -20,7 +23,10 @@ export default function PlayersCards() {
           </div>
 
           <div className="player-card">
-            <img src="/images/lunin.png" alt="Lunin" />
+            <img
+              src={`${process.env.PUBLIC_URL}/images/lunin.png`}
+              alt="Lunin"
+            />
             <div className="player-overlay">
               <div className="player-number">13</div>
               <div>
@@ -38,7 +44,10 @@ export default function PlayersCards() {
 
         <div className="players-grid three-col">
           <div className="player-card">
-            <img src="/images/carvajal.png" alt="Carvajal" />
+            <img
+              src={`${process.env.PUBLIC_URL}/images/carvajal.png`}
+              alt="Carvajal"
+            />
             <div className="player-overlay">
               <div className="player-number">2</div>
               <div>
@@ -49,7 +58,10 @@ export default function PlayersCards() {
           </div>
 
           <div className="player-card">
-            <img src="/images/militao.png" alt="Militao" />
+            <img
+              src={`${process.env.PUBLIC_URL}/images/militao.png`}
+              alt="Militao"
+            />
             <div className="player-overlay">
               <div className="player-number">3</div>
               <div>
@@ -60,7 +72,10 @@ export default function PlayersCards() {
           </div>
 
           <div className="player-card">
-            <img src="/images/alaba.png" alt="Alaba" />
+            <img
+              src={`${process.env.PUBLIC_URL}/images/alaba.png`}
+              alt="Alaba"
+            />
             <div className="player-overlay">
               <div className="player-number">4</div>
               <div>
@@ -78,7 +93,10 @@ export default function PlayersCards() {
 
         <div className="players-grid four-col">
           <div className="player-card">
-            <img src="/images/bellingham.png" alt="Bellingham" />
+            <img
+              src={`${process.env.PUBLIC_URL}/images/bellingham.png`}
+              alt="Bellingham"
+            />
             <div className="player-overlay">
               <div className="player-number">5</div>
               <div>
@@ -89,7 +107,10 @@ export default function PlayersCards() {
           </div>
 
           <div className="player-card">
-            <img src="/images/cama.png" alt="Camavinga" />
+            <img
+              src={`${process.env.PUBLIC_URL}/images/cama.png`}
+              alt="Camavinga"
+            />
             <div className="player-overlay">
               <div className="player-number">6</div>
               <div>
@@ -100,7 +121,10 @@ export default function PlayersCards() {
           </div>
 
           <div className="player-card">
-            <img src="/images/valverde.png" alt="Valverde" />
+            <img
+              src={`${process.env.PUBLIC_URL}/images/valverde.png`}
+              alt="Valverde"
+            />
             <div className="player-overlay">
               <div className="player-number">8</div>
               <div>
@@ -111,7 +135,10 @@ export default function PlayersCards() {
           </div>
 
           <div className="player-card">
-            <img src="/images/tchouameni.png" alt="Tchouameni" />
+            <img
+              src={`${process.env.PUBLIC_URL}/images/tchouameni.png`}
+              alt="Tchouameni"
+            />
             <div className="player-overlay">
               <div className="player-number">14</div>
               <div>
@@ -129,7 +156,10 @@ export default function PlayersCards() {
 
         <div className="players-grid four-col">
           <div className="player-card">
-            <img src="/images/vini.png" alt="Vini Jr" />
+            <img
+              src={`${process.env.PUBLIC_URL}/images/vini.png`}
+              alt="Vini Jr"
+            />
             <div className="player-overlay">
               <div className="player-number">7</div>
               <div>
@@ -140,7 +170,10 @@ export default function PlayersCards() {
           </div>
 
           <div className="player-card">
-            <img src="/images/mbappe.png" alt="Mbappe" />
+            <img
+              src={`${process.env.PUBLIC_URL}/images/mbappe.png`}
+              alt="Mbappe"
+            />
             <div className="player-overlay">
               <div className="player-number">9</div>
               <div>
@@ -151,7 +184,10 @@ export default function PlayersCards() {
           </div>
 
           <div className="player-card">
-            <img src="/images/rodrygo.png" alt="Rodrygo" />
+            <img
+              src={`${process.env.PUBLIC_URL}/images/rodrygo.png`}
+              alt="Rodrygo"
+            />
             <div className="player-overlay">
               <div className="player-number">11</div>
               <div>

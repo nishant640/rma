@@ -13,7 +13,11 @@ function LoginQuoteFooter() {
       {/* FOOTER */}
       <footer className="login-footer">
         <div className="footer-col logo-col">
-          <img className="footer-logo" src="/images/logo.png" alt="Realmadrid" />
+          <img
+            className="footer-logo"
+            src={`${process.env.PUBLIC_URL}/images/logo.png`}
+            alt="Realmadrid"
+          />
           <p>The ultimate unofficial fan page for Madridistas worldwide.</p>
         </div>
 

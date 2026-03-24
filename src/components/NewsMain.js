@@ -8,7 +8,7 @@ function NewsMain() {
           <div className="big-story">
             <img
               className="big-img"
-              src="/images/uclwin.png"
+              src={`${process.env.PUBLIC_URL}/images/uclwin.png`}
               alt="big story"
             />
             <div className="big-text">
@@ -27,7 +27,7 @@ function NewsMain() {
           <div className="small-story">
             <img
               className="small-img"
-              src="/images/bernabeu.png"
+              src={`${process.env.PUBLIC_URL}/images/bernabeu.png`}
               alt="small story"
             />
             <div className="small-text">
@@ -42,7 +42,7 @@ function NewsMain() {
           <div className="news-mini-card">
             <img
               className="mini-img"
-              src="/images/youth.png"
+              src={`${process.env.PUBLIC_URL}/images/youth.png`}
               alt="Youth academy"
             />
             <div className="mini-text">
@@ -57,7 +57,7 @@ function NewsMain() {
           <div className="news-mini-card">
             <img
               className="mini-img"
-              src="/images/uclwin.png"
+              src={`${process.env.PUBLIC_URL}/images/uclwin.png`}
               alt="History celebration"
             />
             <div className="mini-text">
@@ -73,7 +73,7 @@ function NewsMain() {
           <div className="news-mini-card">
             <img
               className="mini-img"
-              src="/images/tactics.png"
+              src={`${process.env.PUBLIC_URL}/images/tactics.png`}
               alt="Tactical analysis"
             />
             <div className="mini-text">
@@ -88,7 +88,7 @@ function NewsMain() {
           <div className="news-mini-card">
             <img
               className="mini-img"
-              src="/images/madridistas.png"
+              src={`${process.env.PUBLIC_URL}/images/madridistas.png`}
               alt="Fans around the world"
             />
             <div className="mini-text">
@@ -103,7 +103,7 @@ function NewsMain() {
           <div className="news-mini-card">
             <img
               className="mini-img"
-              src="/images/upcoming.png"
+              src={`${process.env.PUBLIC_URL}/images/upcoming.png`}
               alt="Transfer rumours"
             />
             <div className="mini-text">
@@ -118,7 +118,7 @@ function NewsMain() {
           <div className="news-mini-card">
             <img
               className="mini-img"
-              src="/images/train.png"
+              src={`${process.env.PUBLIC_URL}/images/train.png`}
               alt="Inside training"
             />
             <div className="mini-text">
