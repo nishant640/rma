@@ -1,138 +1,116 @@
 import "./PlayerSpotlight.css";
 
-function PlayerSpotlight() {
+const players = [
+  {
+    id: 1,
+    name: "Jude Bellingham",
+    position: "Midfielder",
+    number: "5",
+    image: "/images/bellingham.png",
+    alt: "Jude Bellingham",
+    link: "https://www.realmadrid.com/en-US/football/first-team/players/jude-bellingham",
+  },
+  {
+    id: 2,
+    name: "Vinícius Jr.",
+    position: "Forward",
+    number: "7",
+    image: "/images/vini.png",
+    alt: "Vinícius Jr.",
+    link: "https://www.realmadrid.com/en-US/football/first-team/players/vinicius-paixao-de-oliveira-junior",
+  },
+  {
+    id: 3,
+    name: "Kylian Mbappé",
+    position: "Forward",
+    number: "10",
+    image: "/images/mbappe.png",
+    alt: "Kylian Mbappé",
+    link: "https://www.realmadrid.com/en-US/football/first-team/players/kylian-mbappe",
+    active: true,
+  },
+  {
+    id: 4,
+    name: "Antonio Rüdiger",
+    position: "Defender",
+    number: "22",
+    image: "/images/rudiger.png",
+    alt: "Antonio Rüdiger",
+    link: "https://www.realmadrid.com/en-US/football/first-team/players/antonio-rudiger",
+  },
+  {
+    id: 5,
+    name: "Ferland Mendy",
+    position: "Defender",
+    number: "23",
+    image: "/images/mendy.png",
+    alt: "Ferland Mendy",
+    link: "https://www.realmadrid.com/en-US/football/first-team/players/ferland-mendy",
+  },
+  {
+    id: 6,
+    name: "Dean Huijsen",
+    position: "Defender",
+    number: "24",
+    image: "/images/dean.png",
+    alt: "Dean Huijsen",
+    link: "https://www.realmadrid.com/en-US/football/first-team/players/dean-huijsen",
+  },
+];
+
+export default function PlayerSpotlight() {
   return (
     <section id="player-spotlight" className="player-spotlight">
-      <div className="container">
-        <h2 className="section-title">Players Spotlight</h2>
-        <p className="section-sub">Click a player to view more</p>
+      <div className="player-spotlight__container">
+        <h2 className="player-spotlight__title">Players Spotlight</h2>
+        <p className="player-spotlight__subtitle">Click a player to view more</p>
 
-        <div className="spotlight-row">
+        <div className="spotlight-row" role="list">
+          {players.map((player) => (
+            <a
+              key={player.id}
+              className={`player-card ${player.active ? "player-card--active" : ""}`}
+              role="listitem"
+              href={player.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="player-card__media">
+                <img className="player-card__image" src={player.image} alt={player.alt} />
+                <div className="player-card__gradient" />
+                <div className="player-card__badge">
+                  <span className="player-card__badge-num">{player.number}</span>
+                </div>
+              </div>
 
-          <a
-            className="player-card"
-            href="https://www.realmadrid.com/en-US/football/first-team/players/jude-bellingham"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <div className="card-media">
-              <img className="player-photo" src="/images/bellingham.png" alt="Jude Bellingham" />
-              <div className="card-gradient"></div>
-              <div className="player-badge"><span className="badge-num">5</span></div>
-            </div>
-            <div className="player-caption">
-              <div className="player-name">Jude Bellingham</div>
-              <div className="player-pos">Midfielder</div>
-            </div>
-          </a>
-
-          <a
-            className="player-card"
-            href="https://www.realmadrid.com/en-US/football/first-team/players/vinicius-paixao-de-oliveira-junior"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <div className="card-media">
-              <img className="player-photo" src="/images/vini.png" alt="Vinícius Jr." />
-              <div className="card-gradient"></div>
-              <div className="player-badge"><span className="badge-num">7</span></div>
-            </div>
-            <div className="player-caption">
-              <div className="player-name">Vinícius Jr.</div>
-              <div className="player-pos">Forward</div>
-            </div>
-          </a>
+              <div className="player-card__caption">
+                <div className="player-card__name">{player.name}</div>
+                <div className="player-card__position">{player.position}</div>
+              </div>
+            </a>
+          ))}
 
           <a
-            className="player-card"
-            href="https://www.realmadrid.com/en-US/football/first-team/players/kylian-mbappe"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <div className="card-media">
-              <img className="player-photo" src="/images/mbappe.png" alt="Kylian Mbappé" />
-              <div className="card-gradient"></div>
-              <div className="player-badge"><span className="badge-num">10</span></div>
-            </div>
-            <div className="player-caption">
-              <div className="player-name">Kylian Mbappé</div>
-              <div className="player-pos">Forward</div>
-            </div>
-          </a>
-
-          <a
-            className="player-card"
-            href="https://www.realmadrid.com/en-US/football/first-team/players/antonio-rudiger"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <div className="card-media">
-              <img className="player-photo" src="/images/rudiger.png" alt="Antonio Rüdiger" />
-              <div className="card-gradient"></div>
-              <div className="player-badge"><span className="badge-num">22</span></div>
-            </div>
-            <div className="player-caption">
-              <div className="player-name">Antonio Rüdiger</div>
-              <div className="player-pos">Defender</div>
-            </div>
-          </a>
-
-          <a
-            className="player-card"
-            href="https://www.realmadrid.com/en-US/football/first-team/players/ferland-mendy"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <div className="card-media">
-              <img className="player-photo" src="/images/mendy.png" alt="Ferland Mendy" />
-              <div className="card-gradient"></div>
-              <div className="player-badge"><span className="badge-num">23</span></div>
-            </div>
-            <div className="player-caption">
-              <div className="player-name">Ferland Mendy</div>
-              <div className="player-pos">Defender</div>
-            </div>
-          </a>
-
-          <a
-            className="player-card"
-            href="https://www.realmadrid.com/en-US/football/first-team/players/dean-huijsen"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <div className="card-media">
-              <img className="player-photo" src="/images/dean.png" alt="Dean Huijsen" />
-              <div className="card-gradient"></div>
-              <div className="player-badge"><span className="badge-num">24</span></div>
-            </div>
-            <div className="player-caption">
-              <div className="player-name">Dean Huijsen</div>
-              <div className="player-pos">Defender</div>
-            </div>
-          </a>
-
-          <a
-            className="player-card all-players-card"
+            className="player-card player-card--all"
+            role="listitem"
             href="https://www.realmadrid.com/en-US/football/first-team/players"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
-            <div className="card-media">
+            <div className="player-card__media player-card__media--all">
               <div className="all-players-inner">
                 <div className="all-arrow">→</div>
                 <div className="all-text">All Players</div>
               </div>
             </div>
-            <div className="player-caption">
-              <div className="player-name">View Squad</div>
-              <div className="player-pos">Official Website</div>
+
+            <div className="player-card__caption">
+              <div className="player-card__name">View Squad</div>
+              <div className="player-card__position">Official Website</div>
             </div>
           </a>
-
         </div>
       </div>
     </section>
   );
 }
-
-export default PlayerSpotlight;
