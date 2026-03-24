@@ -1,4 +1,4 @@
-import NewsHeader from "../components/NewsHeader";
+import Header from "../components/Header";
 import NewsHero from "../components/NewsHero";
 import NewsMain from "../components/NewsMain";
 import NewsSubscribe from "../components/NewsSubscribe";
@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 function NewsPage() {
   return (
     <div>
-      <NewsHeader />
+      <Header />
       <NewsHero />
       <NewsMain />
       <NewsSubscribe />

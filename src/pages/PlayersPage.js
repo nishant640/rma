@@ -1,21 +1,21 @@
-import PlayersHeader from "../components/PlayersHeader";
+import Header from "../components/Header";
 import PlayersBanner from "../components/PlayersBanner";
 import PlayersQuote from "../components/PlayersQuote";
 import PlayersCards from "../components/PlayersCards";
 import PlayersSubscribe from "../components/PlayersSubscribe";
 import PlayersHala from "../components/PlayersHala";
-import PlayersFooter from "../components/PlayersFooter";
+import Footer from "../components/Footer";
 
 function PlayersPage() {
   return (
     <>
-      <PlayersHeader />
+      <Header />
       <PlayersBanner />
       <PlayersQuote />
       <PlayersCards />
       <PlayersSubscribe />
       <PlayersHala />
-      <PlayersFooter />
+      <Footer />
     </>
   );
 }

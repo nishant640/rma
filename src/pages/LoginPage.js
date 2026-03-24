@@ -1,5 +1,5 @@
 import React from "react";
-import LoginHeader from "../components/LoginHeader";
+import Header from "../components/Header";
 import LoginHero from "../components/LoginHero";
 import LoginForm from "../components/LoginForm";
 import LoginSubscribe from "../components/LoginSubscribe";
@@ -8,7 +8,7 @@ import LoginQuoteFooter from "../components/LoginQuoteFooter";
 export default function LoginPage() {
   return (
     <div>
-      <LoginHeader />
+      <Header />
       <LoginHero />
       <LoginForm />
       <LoginSubscribe />
