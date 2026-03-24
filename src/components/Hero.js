@@ -4,7 +4,9 @@ function Hero() {
   return (
     <section
       className="hero"
-      style={{ backgroundImage: "url(/images/hero.png)" }}
+      style={{
+        backgroundImage: `url(${process.env.PUBLIC_URL}/images/hero.png)`
+      }}
     >
       <div className="hero-overlay"></div>
 

@@ -6,7 +6,7 @@ const players = [
     name: "Jude Bellingham",
     position: "Midfielder",
     number: "5",
-    image: "/images/bellingham.png",
+    image: `${process.env.PUBLIC_URL}/images/bellingham.png`,
     alt: "Jude Bellingham",
     link: "https://www.realmadrid.com/en-US/football/first-team/players/jude-bellingham",
   },
@@ -15,7 +15,7 @@ const players = [
     name: "Vinícius Jr.",
     position: "Forward",
     number: "7",
-    image: "/images/vini.png",
+    image: `${process.env.PUBLIC_URL}/images/vini.png`,
     alt: "Vinícius Jr.",
     link: "https://www.realmadrid.com/en-US/football/first-team/players/vinicius-paixao-de-oliveira-junior",
   },
@@ -24,7 +24,7 @@ const players = [
     name: "Kylian Mbappé",
     position: "Forward",
     number: "10",
-    image: "/images/mbappe.png",
+    image: `${process.env.PUBLIC_URL}/images/mbappe.png`,
     alt: "Kylian Mbappé",
     link: "https://www.realmadrid.com/en-US/football/first-team/players/kylian-mbappe",
     active: true,
@@ -34,7 +34,7 @@ const players = [
     name: "Antonio Rüdiger",
     position: "Defender",
     number: "22",
-    image: "/images/rudiger.png",
+    image: `${process.env.PUBLIC_URL}/images/rudiger.png`,
     alt: "Antonio Rüdiger",
     link: "https://www.realmadrid.com/en-US/football/first-team/players/antonio-rudiger",
   },
@@ -43,7 +43,7 @@ const players = [
     name: "Ferland Mendy",
     position: "Defender",
     number: "23",
-    image: "/images/mendy.png",
+    image: `${process.env.PUBLIC_URL}/images/mendy.png`,
     alt: "Ferland Mendy",
     link: "https://www.realmadrid.com/en-US/football/first-team/players/ferland-mendy",
   },
@@ -52,7 +52,7 @@ const players = [
     name: "Dean Huijsen",
     position: "Defender",
     number: "24",
-    image: "/images/dean.png",
+    image: `${process.env.PUBLIC_URL}/images/dean.png`,
     alt: "Dean Huijsen",
     link: "https://www.realmadrid.com/en-US/football/first-team/players/dean-huijsen",
   },
@@ -76,7 +76,11 @@ export default function PlayerSpotlight() {
               rel="noopener noreferrer"
             >
               <div className="player-card__media">
-                <img className="player-card__image" src={player.image} alt={player.alt} />
+                <img
+                  className="player-card__image"
+                  src={player.image}
+                  alt={player.alt}
+                />
                 <div className="player-card__gradient" />
                 <div className="player-card__badge">
                   <span className="player-card__badge-num">{player.number}</span>

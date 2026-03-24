@@ -8,18 +8,34 @@ function Header() {
         <div className="top-inner">
           <div className="top-left">
             <button className="nav-toggle" type="button">☰</button>
-            <img className="mini-badge" src="/images/mini.png" alt="mini badge" />
+            <img
+              className="mini-badge"
+              src={`${process.env.PUBLIC_URL}/images/mini.png`}
+              alt="mini badge"
+            />
           </div>
 
           <div className="top-center">
             <Link className="brand" to="/">
-              <img className="brand-logo" src="/images/logo.png" alt="Real Madrid" />
+              <img
+                className="brand-logo"
+                src={`${process.env.PUBLIC_URL}/images/logo.png`}
+                alt="Real Madrid"
+              />
             </Link>
           </div>
 
           <div className="top-right">
-            <img className="sponsor" src="/images/adidas.png" alt="Adidas" />
-            <img className="sponsor" src="/images/emirates.png" alt="Emirates" />
+            <img
+              className="sponsor"
+              src={`${process.env.PUBLIC_URL}/images/adidas.png`}
+              alt="Adidas"
+            />
+            <img
+              className="sponsor"
+              src={`${process.env.PUBLIC_URL}/images/emirates.png`}
+              alt="Emirates"
+            />
           </div>
         </div>
       </header>

@@ -7,13 +7,13 @@ function Legendary() {
 
       <div className="legendary-container">
         <img
-          src="/images/trophy.png"
+          src={`${process.env.PUBLIC_URL}/images/trophy.png`}
           alt="Trophy cabinet"
           className="legendary-image left-image"
         />
 
         <img
-          src="/images/Tcount.png"
+          src={`${process.env.PUBLIC_URL}/images/Tcount.png`}
           alt="Trophy stats"
           className="legendary-image right-image"
         />

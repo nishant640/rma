@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -37,7 +37,7 @@ function HomePage() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/news" element={<NewsPage />} />
@@ -45,7 +45,7 @@ function App() {
         <Route path="/matches" element={<MatchesPage />} />
         <Route path="/login" element={<LoginPage />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

@@ -8,7 +8,10 @@ function Footer() {
         {/* LEFT */}
         <div className="footer-left">
           <div className="footer-brand">
-            <img src="/images/logo.png" alt="Real Madrid crest" />
+            <img
+              src={`${process.env.PUBLIC_URL}/images/logo.png`}
+              alt="Real Madrid crest"
+            />
           </div>
 
           <p className="footer-desc">

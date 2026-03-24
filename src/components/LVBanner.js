@@ -3,7 +3,10 @@ import "./LVBanner.css";
 function LVBanner() {
   return (
     <section className="lv-banner">
-      <img src="/images/lv.png" alt="Louis Vuitton x Real Madrid" />
+      <img
+        src={`${process.env.PUBLIC_URL}/images/lv.png`}
+        alt="Louis Vuitton x Real Madrid"
+      />
     </section>
   );
 }

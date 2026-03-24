@@ -12,7 +12,11 @@ function ShopSection() {
         rel="noreferrer"
       >
         <div className="shop-card-inner">
-          <img className="shop-logo" src="/images/logo.png" alt="Real Madrid Logo" />
+          <img
+            className="shop-logo"
+            src={`${process.env.PUBLIC_URL}/images/logo.png`}
+            alt="Real Madrid Logo"
+          />
           <div className="shop-text">
             <span>Official Store</span>
           </div>
@@ -28,7 +32,11 @@ function ShopSection() {
         rel="noreferrer"
       >
         <div className="shop-card-inner">
-          <img className="shop-logo" src="/images/logo.png" alt="Real Madrid Logo" />
+          <img
+            className="shop-logo"
+            src={`${process.env.PUBLIC_URL}/images/logo.png`}
+            alt="Real Madrid Logo"
+          />
           <div className="shop-text">
             <span>RM PLAY</span>
           </div>
