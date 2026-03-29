@@ -173,3 +173,9 @@
     min-height: 130px;
   }
 }
+
+.success-msg{
+  color: green;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
