@@ -1,13 +1,23 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 
 function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <>
       <header className="topbar">
         <div className="top-inner">
           <div className="top-left">
-            <button className="nav-toggle" type="button">☰</button>
+            <button
+              className="nav-toggle"
+              type="button"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Toggle navigation menu"
+            >
+              ☰
+            </button>
             <img
               className="mini-badge"
               src={`${process.env.PUBLIC_URL}/images/mini.png`}
@@ -40,7 +50,7 @@ function Header() {
         </div>
       </header>
 
-      <nav className="navrow">
+      <nav className={`navrow ${menuOpen ? "open" : ""}`}>
         <ul className="nav-links">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/news">News</Link></li>
