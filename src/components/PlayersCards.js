@@ -1,6 +1,41 @@
+import { useEffect, useState } from "react";
 import "./PlayersCards.css";
 
 export default function PlayersCards() {
+  const [players, setPlayers] = useState([]);
+  const [selectedPlayer, setSelectedPlayer] = useState(null);
+
+  useEffect(() => {
+    fetch("https://rma-server.onrender.com/api/players")
+      .then((res) => res.json())
+      .then((data) => setPlayers(data))
+      .catch((err) => console.error("Error fetching players:", err));
+  }, []);
+
+  const openPlayer = (number) => {
+    const player = players.find((p) => p.number === number);
+
+    if (player) {
+      setSelectedPlayer(player);
+    } else {
+      setSelectedPlayer({
+        name: "Player Info Coming Soon",
+        number,
+        position: "Real Madrid Player",
+        nationality: "Unavailable",
+        age: "--",
+        appearances: "--",
+        goals: "--",
+        assists: "--",
+        description: "This player is on the page, but the server data for this card has not been added yet."
+      });
+    }
+  };
+
+  const closeModal = () => {
+    setSelectedPlayer(null);
+  };
+
   return (
     <>
       {/* GOALKEEPERS */}
@@ -8,7 +43,7 @@ export default function PlayersCards() {
         <h2 className="players-title">Goalkeeper</h2>
 
         <div className="players-grid two-col">
-          <div className="player-card">
+          <div className="player-card" onClick={() => openPlayer(1)}>
             <img
               src={`${process.env.PUBLIC_URL}/images/courtois.png`}
               alt="Courtois"
@@ -22,7 +57,7 @@ export default function PlayersCards() {
             </div>
           </div>
 
-          <div className="player-card">
+          <div className="player-card" onClick={() => openPlayer(13)}>
             <img
               src={`${process.env.PUBLIC_URL}/images/lunin.png`}
               alt="Lunin"
@@ -43,7 +78,7 @@ export default function PlayersCards() {
         <h2 className="players-title">Defender</h2>
 
         <div className="players-grid three-col">
-          <div className="player-card">
+          <div className="player-card" onClick={() => openPlayer(2)}>
             <img
               src={`${process.env.PUBLIC_URL}/images/carvajal.png`}
               alt="Carvajal"
@@ -57,7 +92,7 @@ export default function PlayersCards() {
             </div>
           </div>
 
-          <div className="player-card">
+          <div className="player-card" onClick={() => openPlayer(3)}>
             <img
               src={`${process.env.PUBLIC_URL}/images/militao.png`}
               alt="Militao"
@@ -71,7 +106,7 @@ export default function PlayersCards() {
             </div>
           </div>
 
-          <div className="player-card">
+          <div className="player-card" onClick={() => openPlayer(4)}>
             <img
               src={`${process.env.PUBLIC_URL}/images/alaba.png`}
               alt="Alaba"
@@ -92,7 +127,7 @@ export default function PlayersCards() {
         <h2 className="players-title">Midfielder</h2>
 
         <div className="players-grid four-col">
-          <div className="player-card">
+          <div className="player-card" onClick={() => openPlayer(5)}>
             <img
               src={`${process.env.PUBLIC_URL}/images/bellingham.png`}
               alt="Bellingham"
@@ -106,7 +141,7 @@ export default function PlayersCards() {
             </div>
           </div>
 
-          <div className="player-card">
+          <div className="player-card" onClick={() => openPlayer(6)}>
             <img
               src={`${process.env.PUBLIC_URL}/images/cama.png`}
               alt="Camavinga"
@@ -120,7 +155,7 @@ export default function PlayersCards() {
             </div>
           </div>
 
-          <div className="player-card">
+          <div className="player-card" onClick={() => openPlayer(8)}>
             <img
               src={`${process.env.PUBLIC_URL}/images/valverde.png`}
               alt="Valverde"
@@ -134,7 +169,7 @@ export default function PlayersCards() {
             </div>
           </div>
 
-          <div className="player-card">
+          <div className="player-card" onClick={() => openPlayer(14)}>
             <img
               src={`${process.env.PUBLIC_URL}/images/tchouameni.png`}
               alt="Tchouameni"
@@ -155,7 +190,7 @@ export default function PlayersCards() {
         <h2 className="players-title">Forward</h2>
 
         <div className="players-grid four-col">
-          <div className="player-card">
+          <div className="player-card" onClick={() => openPlayer(7)}>
             <img
               src={`${process.env.PUBLIC_URL}/images/vini.png`}
               alt="Vini Jr"
@@ -169,7 +204,7 @@ export default function PlayersCards() {
             </div>
           </div>
 
-          <div className="player-card">
+          <div className="player-card" onClick={() => openPlayer(9)}>
             <img
               src={`${process.env.PUBLIC_URL}/images/mbappe.png`}
               alt="Mbappe"
@@ -183,7 +218,7 @@ export default function PlayersCards() {
             </div>
           </div>
 
-          <div className="player-card">
+          <div className="player-card" onClick={() => openPlayer(11)}>
             <img
               src={`${process.env.PUBLIC_URL}/images/rodrygo.png`}
               alt="Rodrygo"
@@ -211,6 +246,30 @@ export default function PlayersCards() {
           </a>
         </div>
       </section>
+
+      {selectedPlayer && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={closeModal}>
+              ×
+            </button>
+
+            <h2 className="modal-title">{selectedPlayer.name}</h2>
+
+            <div className="modal-info">
+              <p><strong>Number:</strong> {selectedPlayer.number}</p>
+              <p><strong>Position:</strong> {selectedPlayer.position}</p>
+              <p><strong>Nationality:</strong> {selectedPlayer.nationality}</p>
+              <p><strong>Age:</strong> {selectedPlayer.age}</p>
+              <p><strong>Appearances:</strong> {selectedPlayer.appearances}</p>
+              <p><strong>Goals:</strong> {selectedPlayer.goals}</p>
+              <p><strong>Assists:</strong> {selectedPlayer.assists}</p>
+            </div>
+
+            <p className="modal-description">{selectedPlayer.description}</p>
+          </div>
+        </div>
+      )}
     </>
   );
 }
