@@ -1,0 +1,73 @@
+.add-update-section {
+  width: 94%;
+  max-width: 1320px;
+  margin: 30px auto;
+}
+
+.add-update-title {
+  color: #fff;
+  font-family: "Michroma", sans-serif;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.add-update-form {
+  background: linear-gradient(180deg, rgba(12, 20, 60, 0.98), rgba(7, 12, 33, 0.98));
+  border-radius: 22px;
+  padding: 24px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.add-update-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.add-update-input,
+.add-update-textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+}
+
+.add-update-textarea {
+  min-height: 100px;
+  resize: vertical;
+  margin-bottom: 14px;
+}
+
+.add-update-button {
+  background: #fff;
+  color: #0b1a55;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* message styling */
+.add-update-message-wrap {
+  margin-bottom: 12px;
+}
+
+.form-success {
+  color: #9ff7b1;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.form-error {
+  color: #ffb0b0;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}

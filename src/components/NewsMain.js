@@ -1,6 +1,21 @@
+import { useEffect, useState } from "react";
 import "./NewsMain.css";
 
-function NewsMain() {
+function NewsMain({ refreshNews }) {
+  const API_BASE =
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:3001"
+      : "https://rma-server.onrender.com";
+
+  const [newsUpdates, setNewsUpdates] = useState([]);
+
+  useEffect(() => {
+    fetch(`${API_BASE}/api/news`)
+      .then((res) => res.json())
+      .then((data) => setNewsUpdates(data))
+      .catch((err) => console.error("Error fetching news updates:", err));
+  }, [refreshNews]);
+
   return (
     <main className="news-wrap">
       <div className="news-left">
@@ -130,6 +145,23 @@ function NewsMain() {
             </div>
           </div>
         </section>
+
+        {newsUpdates.length > 0 && (
+          <section className="fan-updates-section">
+            <h2 className="players-title">Latest Fan Updates</h2>
+
+            <div className="fan-updates-list">
+              {newsUpdates.map((update) => (
+                <div key={update.id} className="fan-update-card">
+                  <div className="fan-update-tag">{update.category}</div>
+                  <h3 className="fan-update-title">{update.title}</h3>
+                  <p className="fan-update-date">{update.date}</p>
+                  <p className="fan-update-description">{update.description}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
       </div>
 
       <aside className="news-right">
