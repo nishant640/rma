@@ -8,13 +8,95 @@ function NewsMain({ refreshNews }) {
       : "https://rma-server.onrender.com";
 
   const [newsUpdates, setNewsUpdates] = useState([]);
+  const [successMessage, setSuccessMessage] = useState("");
 
   useEffect(() => {
     fetch(`${API_BASE}/api/news`)
       .then((res) => res.json())
       .then((data) => setNewsUpdates(data))
       .catch((err) => console.error("Error fetching news updates:", err));
-  }, [refreshNews]);
+  }, [refreshNews, API_BASE]);
+
+  const handleDelete = async (id) => {
+    try {
+      const res = await fetch(`${API_BASE}/api/news/${id}`, {
+        method: "DELETE",
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        setNewsUpdates((prev) => prev.filter((item) => item.id !== id));
+        setSuccessMessage("News update deleted successfully.");
+        setTimeout(() => setSuccessMessage(""), 3000);
+      } else {
+        alert(data.message || "Failed to delete news update.");
+      }
+    } catch (err) {
+      console.error("Error deleting news update:", err);
+      alert("Something went wrong while deleting.");
+    }
+  };
+
+  const handleEdit = async (update) => {
+    const newTitle = prompt("Enter new title:", update.title);
+    if (newTitle === null) return;
+    if (newTitle.trim().length < 3) {
+      alert("Title must be at least 3 characters.");
+      return;
+    }
+
+    const newCategory = prompt("Enter new category:", update.category);
+    if (newCategory === null) return;
+    if (newCategory.trim().length < 3) {
+      alert("Category must be at least 3 characters.");
+      return;
+    }
+
+    const newDate = prompt("Enter new date:", update.date);
+    if (newDate === null) return;
+    if (!newDate.trim()) {
+      alert("Date is required.");
+      return;
+    }
+
+    const newDescription = prompt("Enter new description:", update.description);
+    if (newDescription === null) return;
+    if (newDescription.trim().length < 10) {
+      alert("Description must be at least 10 characters.");
+      return;
+    }
+
+    try {
+      const res = await fetch(`${API_BASE}/api/news/${update.id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          title: newTitle.trim(),
+          category: newCategory.trim(),
+          date: newDate.trim(),
+          description: newDescription.trim(),
+        }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        setNewsUpdates((prev) =>
+          prev.map((item) => (item.id === update.id ? data.news : item))
+        );
+        setSuccessMessage("News update edited successfully.");
+        setTimeout(() => setSuccessMessage(""), 3000);
+      } else {
+        alert(data.message || "Failed to edit news update.");
+      }
+    } catch (err) {
+      console.error("Error editing news update:", err);
+      alert("Something went wrong while editing.");
+    }
+  };
 
   return (
     <main className="news-wrap">
@@ -148,15 +230,39 @@ function NewsMain({ refreshNews }) {
 
         {newsUpdates.length > 0 && (
           <section className="fan-updates-section">
-            <h2 className="players-title">Latest Fan Updates</h2>
+            <div className="fan-updates-header">
+              <h2 className="players-title">Latest Fan Updates</h2>
+              {successMessage && (
+                <p className="fan-update-success">{successMessage}</p>
+              )}
+            </div>
 
             <div className="fan-updates-list">
               {newsUpdates.map((update) => (
                 <div key={update.id} className="fan-update-card">
-                  <div className="fan-update-tag">{update.category}</div>
+                  <div className="fan-update-top">
+                    <span className="fan-update-tag">{update.category}</span>
+                    <span className="fan-update-date">{update.date}</span>
+                  </div>
+
                   <h3 className="fan-update-title">{update.title}</h3>
-                  <p className="fan-update-date">{update.date}</p>
                   <p className="fan-update-description">{update.description}</p>
+
+                  <div className="fan-update-actions">
+                    <button
+                      className="fan-update-btn fan-update-btn-dark"
+                      onClick={() => handleEdit(update)}
+                    >
+                      Edit
+                    </button>
+
+                    <button
+                      className="fan-update-btn fan-update-btn-light"
+                      onClick={() => handleDelete(update.id)}
+                    >
+                      Delete
+                    </button>
+                  </div>
                 </div>
               ))}
             </div>
@@ -178,7 +284,9 @@ function NewsMain({ refreshNews }) {
             <p className="side-sub">Feb 21, 2026 • Matchday</p>
           </div>
 
-          <a className="side-btn" href="/">VISIT INFO</a>
+          <a className="side-btn" href="/">
+            VISIT INFO
+          </a>
         </div>
 
         <div className="trophy-stats">

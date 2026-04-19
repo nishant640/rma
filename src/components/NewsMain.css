@@ -220,52 +220,62 @@
 
 /* NEW FAN UPDATES */
 .fan-updates-section {
-  margin-top: 22px;
+  margin-top: 26px;
 }
 
 .fan-updates-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  gap: 18px;
 }
 
 .fan-update-card {
-  background: #ffffff;
-  border: 1px solid #e6e6e6;
-  border-radius: 10px;
-  padding: 16px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), #ffffff);
+  border: 1px solid rgba(230, 230, 230, 0.95);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fan-update-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
 }
 
 .fan-update-tag {
   display: inline-block;
   font-size: 11px;
+  letter-spacing: 0.6px;
   background: rgba(11, 99, 217, 0.12);
   color: #0b63d9;
-  padding: 4px 8px;
-  border-radius: 8px;
-  margin-bottom: 10px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  margin-bottom: 12px;
   text-transform: uppercase;
+  font-weight: 700;
 }
 
 .fan-update-title {
-  margin: 0 0 8px;
-  font-size: 16px;
-  line-height: 1.3;
+  margin: 0 0 10px;
+  font-size: 22px;
+  line-height: 1.2;
   color: #111111;
+  font-weight: 700;
 }
 
 .fan-update-date {
-  margin: 0 0 10px;
+  margin: 0 0 12px;
   font-size: 12px;
-  color: #666666;
+  color: #7a7a7a;
+  font-weight: 600;
 }
 
 .fan-update-description {
   margin: 0;
-  font-size: 13px;
-  color: #666666;
-  line-height: 1.5;
+  font-size: 14px;
+  color: #555555;
+  line-height: 1.65;
 }
 
 @media (max-width: 1050px) {
