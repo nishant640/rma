@@ -11,7 +11,8 @@ function NewsAdd({ onNewsPosted }) {
     title: "",
     category: "",
     date: "",
-    description: ""
+    description: "",
+    image: ""
   });
 
   const [success, setSuccess] = useState("");
@@ -35,7 +36,8 @@ function NewsAdd({ onNewsPosted }) {
       !formData.title.trim() ||
       !formData.category.trim() ||
       !formData.date.trim() ||
-      !formData.description.trim()
+      !formData.description.trim() ||
+      !formData.image.trim()
     ) {
       setError("Please fill in all fields.");
       return;
@@ -51,7 +53,8 @@ function NewsAdd({ onNewsPosted }) {
           title: formData.title.trim(),
           category: formData.category.trim(),
           date: formData.date.trim(),
-          description: formData.description.trim()
+          description: formData.description.trim(),
+          image: formData.image.trim()
         })
       });
 
@@ -68,7 +71,8 @@ function NewsAdd({ onNewsPosted }) {
         title: "",
         category: "",
         date: "",
-        description: ""
+        description: "",
+        image: ""
       });
 
       if (onNewsPosted) {
@@ -113,6 +117,15 @@ function NewsAdd({ onNewsPosted }) {
             name="date"
             placeholder="Date"
             value={formData.date}
+            onChange={handleChange}
+          />
+
+          <input
+            className="add-update-input"
+            type="text"
+            name="image"
+            placeholder="Image URL"
+            value={formData.image}
             onChange={handleChange}
           />
         </div>

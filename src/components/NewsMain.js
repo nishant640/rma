@@ -17,16 +17,16 @@ function NewsMain({ refreshNews }) {
       .catch((err) => console.error("Error fetching news updates:", err));
   }, [refreshNews, API_BASE]);
 
-  const handleDelete = async (id) => {
+  const handleDelete = async (_id) => {
     try {
-      const res = await fetch(`${API_BASE}/api/news/${id}`, {
+      const res = await fetch(`${API_BASE}/api/news/${_id}`, {
         method: "DELETE",
       });
 
       const data = await res.json();
 
       if (res.ok) {
-        setNewsUpdates((prev) => prev.filter((item) => item.id !== id));
+        setNewsUpdates((prev) => prev.filter((item) => item._id !== _id));
         setSuccessMessage("News update deleted successfully.");
         setTimeout(() => setSuccessMessage(""), 3000);
       } else {
@@ -67,8 +67,15 @@ function NewsMain({ refreshNews }) {
       return;
     }
 
+    const newImage = prompt("Enter new image URL:", update.image);
+    if (newImage === null) return;
+    if (!newImage.trim()) {
+      alert("Image URL is required.");
+      return;
+    }
+
     try {
-      const res = await fetch(`${API_BASE}/api/news/${update.id}`, {
+      const res = await fetch(`${API_BASE}/api/news/${update._id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -78,6 +85,7 @@ function NewsMain({ refreshNews }) {
           category: newCategory.trim(),
           date: newDate.trim(),
           description: newDescription.trim(),
+          image: newImage.trim(),
         }),
       });
 
@@ -85,7 +93,7 @@ function NewsMain({ refreshNews }) {
 
       if (res.ok) {
         setNewsUpdates((prev) =>
-          prev.map((item) => (item.id === update.id ? data.news : item))
+          prev.map((item) => (item._id === update._id ? data.news : item))
         );
         setSuccessMessage("News update edited successfully.");
         setTimeout(() => setSuccessMessage(""), 3000);
@@ -239,7 +247,13 @@ function NewsMain({ refreshNews }) {
 
             <div className="fan-updates-list">
               {newsUpdates.map((update) => (
-                <div key={update.id} className="fan-update-card">
+                <div key={update._id} className="fan-update-card">
+                  <img
+                    className="mini-img"
+                    src={update.image}
+                    alt={update.title}
+                  />
+
                   <div className="fan-update-top">
                     <span className="fan-update-tag">{update.category}</span>
                     <span className="fan-update-date">{update.date}</span>
@@ -258,7 +272,7 @@ function NewsMain({ refreshNews }) {
 
                     <button
                       className="fan-update-btn fan-update-btn-light"
-                      onClick={() => handleDelete(update.id)}
+                      onClick={() => handleDelete(update._id)}
                     >
                       Delete
                     </button>
